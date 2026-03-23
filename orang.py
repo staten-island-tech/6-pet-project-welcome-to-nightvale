@@ -10,7 +10,7 @@
         return numbers
 Calculator.add(5,6) """
 
-class hero:
+""" class hero:
     def __init__(self, name, money, inventory):
         self.name = name
         self.money = money
@@ -19,4 +19,16 @@ class hero:
         self.inventory.append(item)
         print(self.inventory)
 
-Angel = hero("Angel", 2000000, ["rat", "roblox"])
+Angel = hero("Angel", 2000000, ["rat", "roblox"]) """
+
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.__balance = balance
+    def deposit(self, amount):
+        self.__balance += amount
+    def show_balance(self):
+        print(f"{self.owner} has ${self.__balance}")
+
+Angel = BankAccount("Angel", 2000000)
+Angel.show_balance()
