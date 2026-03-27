@@ -17,8 +17,9 @@ class hero:
         self.inventory = inventory
     def buy(self, item, cost):
         self.inventory.append(item)
-        self.
-        print(self.inventory)
+        self.__money -= cost
+        print(f"{item} has been added to inventory")
+        print(f"{self.name} now has {self.__money} dollars")
 
 Angel = hero("Angel", 2000000, ["rat", "roblox"])
 
@@ -40,10 +41,12 @@ class Pet:
     def show_status(self):
         print(f"{self.name}'s happiness is now {self.__happiness}")
 
-Angel = BankAccount("Angel", 20000000)
-""" Angel.show_balance()
+""" Angel = BankAccount("Angel", 20000000)
+Angel.show_balance()
 Angel.deposit(6700)
-Angel.show_balance() """
+Angel.show_balance()
 Kon = Pet("Kon", 0)
 Kon.play()
-Kon.show_status()
+Kon.show_status() """
+
+Angel.buy("goyco", 2)
