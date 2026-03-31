@@ -1,4 +1,4 @@
-sushi_orders = [
+""" sushi_orders = [
     {"name": "California Roll", "price": 8},
     {"name": "Spicy Tuna Roll", "price": 10},
     {"name": "Salmon Nigiri", "price": 6},
@@ -13,14 +13,37 @@ sushi_orders = [
 
 def receipt(orders):
     rreceipt = {}
+    total = 0
     for order in orders:
         if order["name"] in rreceipt:
-            continue
+            rreceipt[order["name"]]["amount"] += 1
         else:
             rreceipt[order["name"]] = {
                 "price": order["price"],
                 "amount": 1
             }
-    print(rreceipt)
+    for order, value in rreceipt.items():
+        price = value["price"] * value["amount"]
+        print(order, value["amount"], price)
+        total += price
+    print(f"your total is ${total}")
+receipt(sushi_orders) """
 
-receipt(sushi_orders)
+wards = {
+    "Cardiology":  ["Alice", "Bob", "Carol"],
+    "Neurology":   ["Diana", "Eve"],
+    "Orthopedics": ["Frank", "Grace", "Hank"],
+    "Oncology":    ["Ivy", "Bob"]
+}
+
+staff = {}
+def lookup(name):
+    for ward, people in wards.items():
+        for person in people:
+            if person == name:
+                staff = {
+                    "person": name
+                    "ward": ward
+                }
+
+lookup("Bob")
