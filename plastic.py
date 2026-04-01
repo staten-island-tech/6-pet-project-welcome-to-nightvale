@@ -37,13 +37,13 @@ wards = {
 }
 
 staff = {}
-def lookup(name):
-    for ward, people in wards.items():
-        for person in people:
-            if person == name:
-                staff = {
-                    "person": name
-                    "ward": ward
-                }
 
-lookup("Bob")
+for dept, docs in wards.items():
+    for doc in docs:
+        if doc not in staff:
+            staff[doc] = [dept]
+        else:
+            staff[doc].append(dept)
+
+
+print(staff["Bob"])
