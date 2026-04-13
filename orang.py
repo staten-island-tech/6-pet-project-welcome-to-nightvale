@@ -10,7 +10,7 @@
         return numbers
 Calculator.add(5,6) """
 
-class hero:
+""" class hero:
     def __init__(self, name, money, inventory):
         self.name = name
         self.__money = money
@@ -39,7 +39,7 @@ class Pet:
         self.__happiness += 5
         print(f"{self.name} is playing fetch!")
     def show_status(self):
-        print(f"{self.name}'s happiness is now {self.__happiness}")
+        print(f"{self.name}'s happiness is now {self.__happiness}") """
 
 """ Angel = BankAccount("Angel", 20000000)
 Angel.show_balance()
@@ -49,4 +49,32 @@ Kon = Pet("Kon", 0)
 Kon.play()
 Kon.show_status() """
 
-Angel.buy("goyco", 2)
+""" Angel.buy("goyco", 2) """
+
+""" class User:
+    def __init__(self, name, email):
+        self.name = name 
+        self.email = email
+    def display_info(self):
+        return f"User: {self.name}, Email: {self.email}"
+    
+class Student(User):
+    def __init__(self, name, email, student_id):
+        super().__init__(name, email)
+        self.student_id = student_id
+    def display_info(self):
+        return f"Student: {self.name}, Email: {self.email}, Student ID: {self.student_id}"
+
+class Teacher(User):
+    def __init__(self, name, email, subject):
+        super().__init__(name, email)
+        self.subject = subject
+    def display_info(self):
+        return f"Teacher: {self.name}, Email: {self.email}, Student ID: {self.subject}"
+    
+angel = Student("Angel", "angel@example.com", "0001")
+whalen = Teacher("Mr. Whalen", "whalen@example.com", "compsci")
+
+print(angel.display_info())
+print(whalen.display_info())
+ """

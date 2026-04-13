@@ -1,26 +1,18 @@
-class User:
-    def __init__(self, name, email):
-        self.name = name 
-        self.email = email
-    def display_info(self):
-        return f"User: {self.name}, Email: {self.email}"
-    
-class Student(User):
-    def __init__(self, name, email, student_id):
-        super().__init__(name, email)
-        self.student_id = student_id
-    def display_info(self):
-        return f"Student: {self.name}, Email: {self.email}, Student ID: {self.student_id}"
+class pet:
+    def __init__(self, name, hunger, happiness):
+        self.name = name
+        self.hunger = hunger
+        self.happiness = happiness
+    def feed(self):
+        print(f"You feed {self.name}, narrowly avoiding getting bit.")
+        self.hunger += 5
+        print(f"{self.name}'s hunger is now {self.hunger}. It will never be satisfied.")
+    def entertain(self):
+        print("You do a jaunty little dance, for fear of disapproval from the creature.")
+        self.happiness += 5
+        print(f"{self.name}'s happiness is now {self.happiness}. You are safe, for now.")
+    def display(self):
+        print(f"Hunger: {self.hunger}")
+        print(f"Happiness: {self.happiness}")
 
-class Teacher(User):
-    def __init__(self, name, email, subject):
-        super().__init__(name, email)
-        self.subject = subject
-    def display_info(self):
-        return f"Teacher: {self.name}, Email: {self.email}, Student ID: {self.subject}"
-    
-angel = Student("Angel", "angel@example.com", "0001")
-whalen = Teacher("Mr. Whalen", "whalen@example.com", "compsci")
-
-print(angel.display_info())
-print(whalen.display_info())
+garg
