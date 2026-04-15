@@ -15,4 +15,4 @@ class pet:
         print(f"Hunger: {self.hunger}")
         print(f"Happiness: {self.happiness}")
 
-garg
+pet_name = input("What will you name the creature?")
