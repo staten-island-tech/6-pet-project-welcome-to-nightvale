@@ -16,3 +16,6 @@ class pet:
         print(f"Happiness: {self.happiness}")
 
 pet_name = input("What will you name the creature?")
+pett = pet(pet_name, 10, 10)
+print(f"Your pet's name is {pet_name}.")
+
