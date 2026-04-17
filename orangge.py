@@ -18,16 +18,20 @@ class pet:
 pet_name = input("What will you name the creature? ")
 pett = pet(pet_name, 10, 10)
 print(f"Your pet's name is {pet_name}.")
+e = 0
 interacting = False
 while interacting == False:
     action = input("what would you like to do with your pet? \n Your options are: \n1. feed \n2. entertain \n3. display statistics\nSelect a number: ")
-    interacting = True
     if action == "1":
         pett.feed()
+        e += 1
     if action == "2":
         pett.entertain()
+        e += 1
     if action == "3":
         pett.display()
-    else:
+        e += 1
+    if e == 0:
         print("Action does not exist, please choose again")
-        interacting = False
+    else:
+        print(f"Choose another action to perform")
